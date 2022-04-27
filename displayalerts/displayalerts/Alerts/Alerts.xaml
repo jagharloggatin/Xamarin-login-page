@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="displayalerts.Alerts.Alerts">
+    <ContentPage.Content>
+        <Grid>
+
+
+            <Button Text="Display alert1" 
+                    Grid.Row="0"
+                    TextColor="Black"
+                    Clicked="Button_Clicked"/>
+
+            <Button Text="Display alert2" 
+                    Grid.Row="1"
+                    TextColor="Black"
+                    Clicked="Button_Clicked_1"/>
+
+            <Button Text="Display alert3" 
+                    Grid.Row="2"
+                    Clicked="Button_Clicked_2"
+                    TextColor="Black"
+                    x:Name="button2"/>
+
+            <Button Text="Card" 
+                    Grid.Row="3"
+                    Clicked="Button_Clicked_3"
+                    TextColor="Black"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
