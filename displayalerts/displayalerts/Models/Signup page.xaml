@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:models="clr-namespace:displayalerts.Models" x:DataType="models:CustomEntry"
              x:Class="displayalerts.Models.SignUpPage"
+             x:Name="SignUpReference"
              BackgroundColor="MidnightBlue">
     <ContentPage.Content>
         <Grid Margin="0,25,0,0">
@@ -45,98 +46,145 @@
                            Text="Sign up"
                            FontAttributes="Bold"
                            Padding="0"
-                           Margin="140,0,5,5"
+                           Margin="135,-10,5,5"
                            FontSize="20"
                            TextColor="White"/>
+                    
+                    
+                    <Label Text="First Name"
+                           TextColor="White"
+                           FontAttributes="Bold"
+                           Grid.Row="1"
+                           Margin="40,30,0,0"
+                           AbsoluteLayout.LayoutBounds="130,75,200,100"
+                           FontSize="11"/>
+
+                    <Label Text="Last Name"
+                           TextColor="White"
+                           FontAttributes="Bold"
+                           Grid.Row="1"
+                           Margin="180,30,0,0"
+                           AbsoluteLayout.LayoutBounds="130,75,200,100"
+                           FontSize="11"/>
+
 
 
 
                     <Frame BorderColor="MidnightBlue"
-                           Margin="30,35,30,0"
+                           Margin="30,50,30,0"
                            BackgroundColor="White"
-                           HeightRequest="160"
+                           HeightRequest="110"
                            Grid.Row="1">
 
                         <AbsoluteLayout>
-                            <Frame AbsoluteLayout.LayoutBounds="-40,-40,330,80"
+                            <Frame AbsoluteLayout.LayoutBounds="-40,-40,181,80"
                                    >
                                 <Entry
                                     PlaceholderColor="Black"
                                     BackgroundColor="Transparent"
-                                    Placeholder="First name"
+                                    Placeholder="Mohammed"
+                                    Opacity="0.5"
+                                    FontSize="12"
                                     FontAttributes="Bold"
                                     TextColor="BLack"/>
                             </Frame>
 
-                            <Frame AbsoluteLayout.LayoutBounds="-40,0,330,80">
+                            <Frame AbsoluteLayout.LayoutBounds="100,-40,190,80">
                                 <Entry
                                     PlaceholderColor="Black"
                                     BackgroundColor="Transparent"
-                                    Placeholder="Last name"
+                                    Placeholder="El Yahioui"
+                                    Opacity="0.5"
                                     FontAttributes="Bold"
+                                    FontSize="12"
+                                    TextColor="Black"/>
+                            </Frame>
+
+                            <Frame AbsoluteLayout.LayoutBounds="-40,15,181,80">
+                                <Entry
+                                    PlaceholderColor="Black"
+                                    BackgroundColor="Transparent"
+                                    FontSize="12"
+                                    Placeholder="ElYahioui@Yahoo.."
+                                    Opacity="0.5"
+                                    FontAttributes="Bold"
+                                    TextColor="Black"/>
+                            </Frame>
+
+                            <Frame AbsoluteLayout.LayoutBounds="100,15,190,80">
+                                <Entry
+                                    PlaceholderColor="Black"
+                                    BackgroundColor="Transparent"
+                                    Placeholder="0736990759"
+                                    Opacity="0.5"
+                                    FontSize="12"
+                                    
+                                    FontAttributes="Bold"
+                                    TextColor="Black"/>
+                            </Frame>
+
+                            <Frame AbsoluteLayout.LayoutBounds="-40,70,181,80">
+                                <Entry
+                                    PlaceholderColor="Black"
+                                    BackgroundColor="Transparent"
+                                    Placeholder="980710-6183"
+                                    Opacity="0.5"
+                                    FontSize="12"
+                                    
+                                    FontAttributes="Bold"
+                                    TextColor="Black"/>
+                            </Frame>
+
+                            <Frame AbsoluteLayout.LayoutBounds="100,70,330,80">
+                                <Entry
+                                    PlaceholderColor="Black"
+                                    BackgroundColor="Transparent"
+                                    Placeholder="..."
+                                    Opacity="0.5"
+                                    FontSize="12"
                                     IsPassword="True"
-                                    TextColor="Black"/>
-                            </Frame>
-
-                            <Frame AbsoluteLayout.LayoutBounds="-40,40,330,80">
-                                <Entry
-                                    PlaceholderColor="Black"
-                                    BackgroundColor="Transparent"
-                                    Placeholder="Email"
                                     FontAttributes="Bold"
                                     TextColor="Black"/>
                             </Frame>
 
-                            <Frame AbsoluteLayout.LayoutBounds="-40,80,330,80">
-                                <Entry
-                                    PlaceholderColor="Black"
-                                    BackgroundColor="Transparent"
-                                    Placeholder="Phonenumber"
-                                    FontAttributes="Bold"
-                                    TextColor="Black"/>
-                            </Frame>
-
-                            <Frame AbsoluteLayout.LayoutBounds="-40,120,330,80">
-                                <Entry
-                                    PlaceholderColor="Black"
-                                    BackgroundColor="Transparent"
-                                    Placeholder="Social security number"
-                                    FontAttributes="Bold"
-                                    TextColor="Black"/>
-                            </Frame>
-
-
                             <BoxView BackgroundColor="MidnightBlue"
-                                     AbsoluteLayout.LayoutBounds="-20,18,290,3"
-                                     >
-                            </BoxView>
-                            
-                            <BoxView BackgroundColor="MidnightBlue"
-                                     AbsoluteLayout.LayoutBounds="-20,58,290,3"
+                                     AbsoluteLayout.LayoutBounds="-20,74,290,19"
                                      >
                             </BoxView>
 
                             <BoxView BackgroundColor="MidnightBlue"
-                                     AbsoluteLayout.LayoutBounds="-20,98,290,3"
+                                     AbsoluteLayout.LayoutBounds="-20,18,290,19"
                                      >
                             </BoxView>
 
                             <BoxView BackgroundColor="MidnightBlue"
-                                     AbsoluteLayout.LayoutBounds="-20,138,290,3"
+                                     AbsoluteLayout.LayoutBounds="119,-20,3,160"
                                      >
                             </BoxView>
 
-       
+                            <Label Text="Email Adress"
+                                   TextColor="White"
+                                   FontAttributes="Bold"
+                                   AbsoluteLayout.LayoutBounds="-10,20,200,100"
+                                   FontSize="11"/>
 
-                            <Image Source="password.png" 
-                                   Scale="0.7"
-                                   AbsoluteLayout.LayoutBounds="100,27,290,25"
-                                 />
+                            <Label Text="Phonenumber"
+                                   TextColor="White"
+                                   FontAttributes="Bold"
+                                   AbsoluteLayout.LayoutBounds="130,20,200,100"
+                                   FontSize="11"/>
 
-                            <Image Source="username.png" 
-                                   Scale="0.7"
-                                   AbsoluteLayout.LayoutBounds="100,-13,290,25"
-                                 />
+                            <Label Text="Password"
+                                   TextColor="White"
+                                   FontAttributes="Bold"
+                                   AbsoluteLayout.LayoutBounds="130,75,200,100"
+                                   FontSize="11"/>
+
+                            <Label Text="Social security number"
+                                   TextColor="White"
+                                   FontAttributes="Bold"
+                                   AbsoluteLayout.LayoutBounds="-10,75,200,100"
+                                   FontSize="11"/>
 
 
                         </AbsoluteLayout>
@@ -151,10 +199,7 @@
                                AbsoluteLayout.LayoutBounds="31,11,21,20"
                                BackgroundColor="White"
                                >
-
                         </Frame>
-
-
 
                         <CheckBox
                                 Margin="32,5,5,5"
@@ -178,6 +223,43 @@
                                 FontAttributes="Bold"/>
 
                     </AbsoluteLayout>
+
+                    <Grid Grid.Row="3">
+                        <Grid>
+
+                            <Label Text="Forgot your password?"
+                                   TextColor="Gold"
+                                   x:Name="Label1"
+                                   Grid.Column="0"
+                                   Margin="50,-15,0,0"
+                                   FontAttributes="Bold"
+                                   FontSize="10">
+
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                    BindingContext="{x:Reference SignUpReference}"
+                                    />
+                                </Label.GestureRecognizers>
+                            </Label>
+                            
+                                <Label Text="Already signed up?"
+                                   TextColor="Gold"
+                                   Grid.Column="1"
+                                       x:Name="Label2"
+                                   Margin="20,-15,0,0"
+                                   FontAttributes="Bold"
+                                   FontSize="10">
+
+                                <Label.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    BindingContext="{x:Reference SignUpReference}"
+                                    />
+                                </Label.GestureRecognizers>
+                            </Label>
+                            
+
+                        </Grid>
+                    </Grid>
                     
                 </Grid>
 

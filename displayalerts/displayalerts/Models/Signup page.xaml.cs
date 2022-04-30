@@ -16,5 +16,12 @@ namespace displayalerts.Models
         {
             InitializeComponent();
         }
+
+        private async void SignUp_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
     }
+
+
 }
