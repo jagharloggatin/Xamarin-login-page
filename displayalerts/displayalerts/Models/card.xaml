@@ -3,8 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="displayalerts.Alerts.card">
     <ContentPage.Content>
-            <Grid                   
-                    >
+            <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="80"/>
                     <RowDefinition Height="Auto"/>
@@ -80,6 +79,23 @@
                        CornerRadius="10">
 
                     <Image Source="author1.png"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               Aspect="AspectFill"
+                               />
+                </Frame>
+
+                <Frame BorderColor="Transparent"
+                       BackgroundColor="Transparent"
+                       AbsoluteLayout.LayoutFlags="PositionProportional"
+                       AbsoluteLayout.LayoutBounds="0.89,0.5,100,50"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       Padding="0"
+                       IsClippedToBounds="True"
+                       CornerRadius="10">
+
+                    <Image Source="decryptlogo2.png"
                                HorizontalOptions="Center"
                                VerticalOptions="Center"
                                Aspect="AspectFill"

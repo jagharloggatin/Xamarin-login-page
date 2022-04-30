@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:displayalerts.Models" x:DataType="local:CustomEntry"
+             x:Class="displayalerts.Models.Login"
+             BackgroundImageSource="library3.jpg">
+    <ContentPage.Content>
+        <Grid Margin="0,50,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Frame BackgroundColor="Transparent"
+                   HeightRequest="400"
+                   CornerRadius="10"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   WidthRequest="700"
+                   IsClippedToBounds="True"
+                   Padding="0"
+                   BorderColor="Transparent">
+
+                <AbsoluteLayout>
+
+                    <Frame BorderColor="Gray"   
+                       BackgroundColor="Gray"
+                       IsClippedToBounds="True"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       Padding="0"
+                       CornerRadius="15"
+                               >
+                        <Image Source="library7.jpg"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               HeightRequest="400"
+                                   WidthRequest="650"
+                               Aspect="AspectFill"
+                               />
+                    </Frame>
+
+                    <Frame BackgroundColor="Black"
+                               HeightRequest="390"
+                               Padding="0"
+                               IsClippedToBounds="True"
+                               AbsoluteLayout.LayoutFlags="PositionProportional"
+                               CornerRadius="15"
+                               Margin="5,5,5,5"
+                               WidthRequest="250">
+                        <Grid>
+    
+
+                            <Image Source="beige3.jpg"
+                                   Opacity="0.2"
+                                   Scale="3"/>
+                            <StackLayout>
+
+                                <Grid>
+
+                                <Label Text="Sign in"
+                                           Margin="75,5,5,5"
+                                       TextColor="White"
+                                       FontSize="30"
+                                       Opacity="0.5"
+                                       Grid.Row="0"
+                                           FontAttributes="Bold"/>
+
+                                <Frame BorderColor="Transparent"
+                                       HeightRequest="120"
+                                       BackgroundColor="Beige"
+                                       Margin="10,-10,10,10"
+                                       CornerRadius="15"
+                                       Padding="0"
+                                       Grid.Row="1"
+                                     >
+                                    <AbsoluteLayout>
+
+                                            <Frame AbsoluteLayout.LayoutBounds="-20,-20,270,100"
+                                               BorderColor="Transparent">
+                                                <local:CustomEntry
+                                                    StyleClass="C"
+                                                       Placeholder="Social Security Number" 
+                                                       TextColor="Black"
+                                                        FontFamily="Arial"
+                                                       HorizontalOptions="FillAndExpand"
+                                                FontAttributes="Bold"
+                                                       BackgroundColor="DarkGray"
+                                                      />
+                                        </Frame>
+
+                                            <Frame AbsoluteLayout.LayoutBounds="-20,40,270,100"
+                                                   BorderColor="Transparent"
+                                                   >
+                                                <local:CustomEntry 
+                                                       Placeholder="Password" 
+                                                       TextColor="Black" 
+                                                        FontFamily="Arial"
+                                                    
+                                                FontAttributes="Bold"
+                                                       HorizontalOptions="FillAndExpand"
+                                                       BackgroundColor="DarkGray"
+                                                      />
+
+                                            </Frame>
+
+                                        </AbsoluteLayout>
+
+                                    </Frame>
+                                    <AbsoluteLayout Grid.Row="2">
+                                        <Button BackgroundColor="White"
+                                                Text="Register"
+                                                HeightRequest="35"
+                                                FontAttributes="Bold"
+                                                CornerRadius="15"
+                                                Margin="40,5,5,5"
+                                                Opacity="0.5"
+                                                Clicked="Button_Clicked"
+                                                TextColor="Black"/>
+
+                                        <Button BackgroundColor="White"
+                                                Text="Sign up"
+                                                Opacity="0.5"
+                                                HeightRequest="35"
+                                                CornerRadius="15"
+                                                Clicked="Button_Clicked_1"
+                                                Margin="140,5,5,5"
+                                                FontAttributes="Bold"
+                                                TextColor="Black"/>
+
+                                    </AbsoluteLayout>
+                                </Grid>
+                            </StackLayout>
+                        </Grid>
+                    </Frame>
+                </AbsoluteLayout>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

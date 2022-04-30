@@ -1,4 +1,5 @@
-﻿using System;
+﻿using displayalerts.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,17 +20,18 @@ namespace displayalerts.Alerts
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            await DisplayPromptAsync("prompt async", "Hello");
+            await Navigation.PushAsync(new Login3());
         }
 
         private async void Button_Clicked_1(object sender, EventArgs e)
         {
-            await DisplayActionSheet("1", "cancel", "2");
+            await Navigation.PushAsync(new Login2());
 
         }
 
         private async void Button_Clicked_2(object sender, EventArgs e)
         {
+            await Navigation.PushAsync(new Login());
         }
 
 

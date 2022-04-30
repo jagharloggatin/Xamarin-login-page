@@ -134,7 +134,17 @@
     <Content Include="author.png" />
     <Content Include="author1.png" />
     <Content Include="backgrounds1.jpg" />
+    <Content Include="backgrounds2.jpg" />
+    <Content Include="backgrounds3.jpg" />
+    <Content Include="backgrounds4.jpg" />
+    <Content Include="backgrounds5.jpg" />
+    <Content Include="backgrounds6.jpg" />
+    <Content Include="backgrounds7.jpg" />
+    <Content Include="beige2.jpg" />
+    <Content Include="beige3.jpg" />
+    <Content Include="beige4.jpg" />
     <Content Include="book.png" />
+    <Content Include="bookcover.png" />
     <Content Include="books3.png" />
     <Content Include="card.jpg" />
     <Content Include="card2.jpg" />
@@ -142,10 +152,26 @@
     <Content Include="decrypt.jpg" />
     <Content Include="decrypt2.jpg" />
     <Content Include="decrypt3.png" />
+    <Content Include="decrypt6.png" />
+    <Content Include="decryptlogo.png" />
+    <Content Include="decryptlogo2.png" />
+    <Content Include="decryptlogo2b.png" />
+    <Content Include="fadingblue.png" />
+    <Content Include="libbackground1.png" />
     <Content Include="library.png" />
     <Content Include="library2.jpg" />
+    <Content Include="library3.jpg" />
+    <Content Include="library4.jpg" />
+    <Content Include="library5.jpg" />
+    <Content Include="library6.jpg" />
+    <Content Include="library7.jpg" />
+    <Content Include="libraryback.jpg" />
+    <Content Include="password.png" />
+    <Content Include="password1.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="sthlm.png" />
+    <Content Include="username.png" />
+    <Content Include="username1.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

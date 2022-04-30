@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:displayalerts.Models"
+             x:Class="displayalerts.Models.Login3"
+             BackgroundColor="MidnightBlue">
+    <ContentPage.Content>
+        <Grid Margin="0,25,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Frame BorderColor="Transparent"
+                   Grid.Row="1"
+                   CornerRadius="10"
+                   IsClippedToBounds="True"
+                   Grid.Column="1"
+                   Scale="1.2"
+                   Margin="0,30,0,0"
+                   HeightRequest="450"
+                   WidthRequest="350"
+                   Padding="0"
+                    >
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Image Grid.Row="0"
+                           Source="decryptlogo.png"
+                           Scale="0.9"/>
+
+                    <Label Grid.Row="1" 
+                           Text="Sign in"
+                           FontAttributes="Bold"
+                           Padding="0"
+                           Margin="140,0,5,5"
+                           FontSize="20"
+                           TextColor="White"/>
+
+
+                    <Frame BorderColor="MidnightBlue"
+                           Margin="30,35,30,0"
+                           BackgroundColor="White"
+                           HeightRequest="40"
+                           Grid.Row="1">
+
+                        <AbsoluteLayout>
+                            <Frame AbsoluteLayout.LayoutBounds="-40,-40,330,80"
+                                   >
+                                <Entry
+                                    PlaceholderColor="Black"
+                                    BackgroundColor="Transparent"
+                                    Placeholder="Username"
+                                    FontAttributes="Bold"
+                                    TextColor="BLack"/>
+                            </Frame>
+
+                            <Frame AbsoluteLayout.LayoutBounds="-40,0,330,80">
+                                <Entry
+                                    PlaceholderColor="Black"
+                                    BackgroundColor="Transparent"
+                                    Placeholder="Password"
+                                    FontAttributes="Bold"
+                                    IsPassword="True"
+                                    TextColor="Black"/>
+                            </Frame>
+
+                            <BoxView BackgroundColor="MidnightBlue"
+                                     AbsoluteLayout.LayoutBounds="-20,18,290,3"
+                                     >
+                                
+                            </BoxView>
+
+                            <Image Source="password.png" 
+                                   Scale="0.7"
+                                   AbsoluteLayout.LayoutBounds="100,27,290,25"
+                                 />
+
+                            <Image Source="username.png" 
+                                   Scale="0.7"
+                                   AbsoluteLayout.LayoutBounds="100,-13,290,25"
+                                 />
+                        </AbsoluteLayout>
+
+                    </Frame>
+
+                    <AbsoluteLayout Grid.Row="2">
+
+                        <Grid Scale="0.8"
+                              Padding="0"
+                              Margin="-10,-5,0,0">
+
+                            <CheckBox Margin="35,0,0,0" 
+                                          Grid.Column="0"
+                                          CheckedChanged="CheckBox_CheckedChanged">
+
+                                </CheckBox>
+
+                            <Label Text="Remember me"
+                                   Grid.Column="1"
+                                   Margin="-23,5,0,0"
+                                   FontAttributes="Bold"
+                                   TextColor="White"
+                                   FontSize="15"/>
+
+                        </Grid>
+
+                        <Grid AbsoluteLayout.LayoutBounds="30,30,290,35"
+                              Padding="0">
+
+                            <Frame                        
+                                AbsoluteLayout.LayoutBounds="30,0,295,40"
+                                Padding="0"
+                                Grid.Column="0"
+                                CornerRadius="10"
+                                IsClippedToBounds="True">
+
+                                <Button Text="Login"
+                                        BackgroundColor="OrangeRed"
+                                        TextColor="White"
+                                        CornerRadius="10"
+                                        FontAttributes="Bold"/>
+                            </Frame>
+
+
+                            <Frame                        
+                                AbsoluteLayout.LayoutBounds="30,40,290,40"
+                                Padding="0"
+                                Grid.Column="1"
+                                CornerRadius="10"
+                                IsClippedToBounds="True">
+
+                                <Button Text="Sign Up"
+                                        Clicked="Button_Clicked"
+                                        BackgroundColor="OrangeRed"
+                                        CornerRadius="10"
+                                        TextColor="White"
+                                        FontAttributes="Bold"/>
+
+                            </Frame>
+
+
+                        </Grid>
+
+
+                    </AbsoluteLayout>
+
+
+     
+                </Grid>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -6,17 +6,17 @@
         <Grid>
 
 
-            <Button Text="Display alert1" 
+            <Button Text="Login3" 
                     Grid.Row="0"
                     TextColor="Black"
                     Clicked="Button_Clicked"/>
 
-            <Button Text="Display alert2" 
+            <Button Text="Login2" 
                     Grid.Row="1"
                     TextColor="Black"
                     Clicked="Button_Clicked_1"/>
 
-            <Button Text="Display alert3" 
+            <Button Text="Login" 
                     Grid.Row="2"
                     Clicked="Button_Clicked_2"
                     TextColor="Black"

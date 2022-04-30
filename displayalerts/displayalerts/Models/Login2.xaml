@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:displayalerts.Models"
+             x:Class="displayalerts.Models.Login2"
+             BackgroundColor="Gray"
+             >
+    <ContentPage.Content>
+
+        <Grid>
+            
+            <Grid Margin="0,25,0,0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Frame BorderColor="Gray"
+                   Grid.Row="1"
+                   CornerRadius="10"
+                   IsClippedToBounds="True"
+                   Grid.Column="1"
+                   HeightRequest="450"
+                   WidthRequest="600"
+                   Padding="0"
+                   >
+                <Grid>
+
+                    <Image Source="backgrounds7.jpg"
+                           VerticalOptions="CenterAndExpand"
+                           Aspect="AspectFill"
+                           HeightRequest="450"
+                           HorizontalOptions="FillAndExpand"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Frame BorderColor="Black"
+                               Margin="10,10,0,0"
+                               Grid.Column="0"
+                               BackgroundColor="Gray"
+                               HeightRequest="390"
+                               WidthRequest="240">
+                                <AbsoluteLayout>
+                                    <Label Text="Sign in"
+                                           FontAttributes="Bold"
+                                           FontSize="25"
+                                           AbsoluteLayout.LayoutBounds="0.1,0.1,100,50"
+                                           TextColor="White"/>
+
+                                </AbsoluteLayout>
+
+                            </Frame>
+
+           
+
+
+                            <Frame BorderColor="Black"
+                               Margin="10,10,0,0"
+                               Grid.Column="1"
+                               BackgroundColor="Gray"
+                               HeightRequest="390"
+                               WidthRequest="240">
+                                <AbsoluteLayout>
+
+                                </AbsoluteLayout>
+
+                            </Frame>
+
+      
+
+
+                        </Grid>
+
+
+                    </StackLayout>
+
+                </Grid>
+
+            </Frame>
+        </Grid>
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

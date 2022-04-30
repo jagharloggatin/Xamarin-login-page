@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:models="clr-namespace:displayalerts.Models" x:DataType="models:CustomEntry"
+             x:Class="displayalerts.Models.SignUpPage"
+             BackgroundColor="MidnightBlue">
+    <ContentPage.Content>
+        <Grid Margin="0,25,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Frame BorderColor="Transparent"
+                   Grid.Row="1"
+                   CornerRadius="10"
+                   IsClippedToBounds="True"
+                   Grid.Column="1"
+                   Scale="1.2"
+                   Margin="0,30,0,0"
+                   HeightRequest="450"
+                   WidthRequest="350"
+                   Padding="0"
+                    >
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Image Grid.Row="0"
+                           Source="decryptlogo.png"
+                           Scale="0.9"/>
+
+
+                    <Label Grid.Row="1" 
+                           Text="Sign up"
+                           FontAttributes="Bold"
+                           Padding="0"
+                           Margin="140,0,5,5"
+                           FontSize="20"
+                           TextColor="White"/>
+
+
+
+                    <Frame BorderColor="MidnightBlue"
+                           Margin="30,35,30,0"
+                           BackgroundColor="White"
+                           HeightRequest="160"
+                           Grid.Row="1">
+
+                        <AbsoluteLayout>
+                            <Frame AbsoluteLayout.LayoutBounds="-40,-40,330,80"
+                                   >
+                                <Entry
+                                    PlaceholderColor="Black"
+                                    BackgroundColor="Transparent"
+                                    Placeholder="First name"
+                                    FontAttributes="Bold"
+                                    TextColor="BLack"/>
+                            </Frame>
+
+                            <Frame AbsoluteLayout.LayoutBounds="-40,0,330,80">
+                                <Entry
+                                    PlaceholderColor="Black"
+                                    BackgroundColor="Transparent"
+                                    Placeholder="Last name"
+                                    FontAttributes="Bold"
+                                    IsPassword="True"
+                                    TextColor="Black"/>
+                            </Frame>
+
+                            <Frame AbsoluteLayout.LayoutBounds="-40,40,330,80">
+                                <Entry
+                                    PlaceholderColor="Black"
+                                    BackgroundColor="Transparent"
+                                    Placeholder="Email"
+                                    FontAttributes="Bold"
+                                    TextColor="Black"/>
+                            </Frame>
+
+                            <Frame AbsoluteLayout.LayoutBounds="-40,80,330,80">
+                                <Entry
+                                    PlaceholderColor="Black"
+                                    BackgroundColor="Transparent"
+                                    Placeholder="Phonenumber"
+                                    FontAttributes="Bold"
+                                    TextColor="Black"/>
+                            </Frame>
+
+                            <Frame AbsoluteLayout.LayoutBounds="-40,120,330,80">
+                                <Entry
+                                    PlaceholderColor="Black"
+                                    BackgroundColor="Transparent"
+                                    Placeholder="Social security number"
+                                    FontAttributes="Bold"
+                                    TextColor="Black"/>
+                            </Frame>
+
+
+                            <BoxView BackgroundColor="MidnightBlue"
+                                     AbsoluteLayout.LayoutBounds="-20,18,290,3"
+                                     >
+                            </BoxView>
+                            
+                            <BoxView BackgroundColor="MidnightBlue"
+                                     AbsoluteLayout.LayoutBounds="-20,58,290,3"
+                                     >
+                            </BoxView>
+
+                            <BoxView BackgroundColor="MidnightBlue"
+                                     AbsoluteLayout.LayoutBounds="-20,98,290,3"
+                                     >
+                            </BoxView>
+
+                            <BoxView BackgroundColor="MidnightBlue"
+                                     AbsoluteLayout.LayoutBounds="-20,138,290,3"
+                                     >
+                            </BoxView>
+
+       
+
+                            <Image Source="password.png" 
+                                   Scale="0.7"
+                                   AbsoluteLayout.LayoutBounds="100,27,290,25"
+                                 />
+
+                            <Image Source="username.png" 
+                                   Scale="0.7"
+                                   AbsoluteLayout.LayoutBounds="100,-13,290,25"
+                                 />
+
+
+                        </AbsoluteLayout>
+
+                    </Frame>
+                    <AbsoluteLayout Grid.Row="2" 
+                                    Scale="0.6"
+                                    Margin="-70,-10,0,5">
+
+                        <Frame BorderColor="White"
+                               CornerRadius="0"
+                               AbsoluteLayout.LayoutBounds="31,11,21,20"
+                               BackgroundColor="White"
+                               >
+
+                        </Frame>
+
+
+
+                        <CheckBox
+                                Margin="32,5,5,5"
+                                BackgroundColor="Transparent"/>
+
+                        <Label Text="Terms of Agreement"
+                               Margin="65,8,5,5"
+                               TextColor="White"
+                               FontAttributes="Bold"
+                               FontSize="19"/>
+
+
+                        <Button Text="Register"
+                                Margin="300,10,0,0"
+                                WidthRequest="200"
+                                HeightRequest="50"
+                                FontSize="23"
+                                BackgroundColor="OrangeRed"
+                                TextColor="White"
+                                CornerRadius="10"
+                                FontAttributes="Bold"/>
+
+                    </AbsoluteLayout>
+                    
+                </Grid>
+
+
+
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
