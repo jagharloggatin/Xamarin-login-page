@@ -156,6 +156,8 @@
     <Content Include="decryptlogo.png" />
     <Content Include="decryptlogo2.png" />
     <Content Include="decryptlogo2b.png" />
+    <Content Include="decryptlogo3.png" />
+    <Content Include="decryptlogo3b.png" />
     <Content Include="fadingblue.png" />
     <Content Include="libbackground1.png" />
     <Content Include="library.png" />

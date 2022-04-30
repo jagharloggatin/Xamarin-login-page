@@ -23,7 +23,7 @@
                    CornerRadius="10"
                    IsClippedToBounds="True"
                    Grid.Column="1"
-                   Scale="1.2"
+                   Scale="1.3"
                    Margin="0,30,0,0"
                    HeightRequest="450"
                    WidthRequest="350"
@@ -37,25 +37,32 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <Image Grid.Row="0"
-                           Source="decryptlogo.png"
-                           Scale="0.9"/>
+
+
+                    <Label Grid.Row="0"
+                           Text="Decrypt"
+                           FontAttributes="Bold"
+                           Margin="60,20,0,0"
+                           FontSize="60"
+                           TextColor="OrangeRed"
+                           Scale="1"/>
 
 
                     <Label Grid.Row="1" 
                            Text="Sign up"
                            FontAttributes="Bold"
                            Padding="0"
-                           Margin="135,-10,5,5"
+                           Margin="40,10,5,5"
                            FontSize="20"
                            TextColor="White"/>
-                    
-                    
+
+
+
                     <Label Text="First Name"
                            TextColor="White"
                            FontAttributes="Bold"
                            Grid.Row="1"
-                           Margin="40,30,0,0"
+                           Margin="40,60,0,0"
                            AbsoluteLayout.LayoutBounds="130,75,200,100"
                            FontSize="11"/>
 
@@ -63,15 +70,13 @@
                            TextColor="White"
                            FontAttributes="Bold"
                            Grid.Row="1"
-                           Margin="180,30,0,0"
+                           Margin="180,60,0,0"
                            AbsoluteLayout.LayoutBounds="130,75,200,100"
                            FontSize="11"/>
 
 
-
-
                     <Frame BorderColor="MidnightBlue"
-                           Margin="30,50,30,0"
+                           Margin="30,80,30,0"
                            BackgroundColor="White"
                            HeightRequest="110"
                            Grid.Row="1">
@@ -212,6 +217,18 @@
                                FontSize="19"/>
 
 
+                        <Label Text="By accepting our terms of agreement"
+                               Margin="65,40,5,5"
+                               TextColor="White"
+                               FontAttributes="Bold"
+                               FontSize="11"/>
+                        <Label Text="you're signing away all your rights"
+                               Margin="65,55,5,5"
+                               TextColor="White"
+                               FontAttributes="Bold"
+                               FontSize="11"/>
+
+
                         <Button Text="Register"
                                 Margin="300,10,0,0"
                                 WidthRequest="200"
@@ -243,12 +260,12 @@
                             </Label>
                             
                                 <Label Text="Already signed up?"
-                                   TextColor="Gold"
-                                   Grid.Column="1"
+                                       TextColor="Gold"
+                                       Grid.Column="1"
                                        x:Name="Label2"
-                                   Margin="20,-15,0,0"
-                                   FontAttributes="Bold"
-                                   FontSize="10">
+                                       Margin="20,-15,0,0"
+                                       FontAttributes="Bold"
+                                       FontSize="10">
 
                                 <Label.GestureRecognizers>
                                 <TapGestureRecognizer
