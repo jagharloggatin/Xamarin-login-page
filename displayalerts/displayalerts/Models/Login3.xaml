@@ -149,10 +149,12 @@
                                    TextColor="White"
                                    FontSize="15"/>
                             
-                            <Label Text="Forgot your password?"
+                            <Button Text="Forgot your password?"
                                    FontAttributes="Bold"
                                    FontSize="12"
-                                   Margin="45,8,5,5"
+                                   Margin="15,0,5,5"
+                                    BackgroundColor="Transparent"
+                                    Clicked="ForgotPasswordClicked"
                                    Grid.Column="2"
                                    WidthRequest="200"
                                    TextColor="Gold"/>

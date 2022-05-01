@@ -26,5 +26,10 @@ namespace displayalerts.Models
         {
             await Navigation.PushAsync(new SignUpPage());
         }
+
+        private async void ForgotPasswordClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ForgotPassword());
+        }
     }
 }

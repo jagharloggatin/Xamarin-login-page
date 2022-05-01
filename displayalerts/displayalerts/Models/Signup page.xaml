@@ -2,6 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:models="clr-namespace:displayalerts.Models" x:DataType="models:CustomEntry"
              x:Class="displayalerts.Models.SignUpPage"
+             xmlns:behaviors="clr-namespace:displayalerts.Reader"
+             
              x:Name="SignUpReference"
              BackgroundColor="MidnightBlue">
     <ContentPage.Content>
@@ -37,8 +39,6 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-
-
                     <Label Grid.Row="0"
                            Text="Decrypt"
                            FontAttributes="Bold"
@@ -47,7 +47,6 @@
                            TextColor="OrangeRed"
                            Scale="1"/>
 
-
                     <Label Grid.Row="1" 
                            Text="Sign up"
                            FontAttributes="Bold"
@@ -55,8 +54,6 @@
                            Margin="40,10,5,5"
                            FontSize="20"
                            TextColor="White"/>
-
-
 
                     <Label Text="First Name"
                            TextColor="White"
@@ -74,7 +71,6 @@
                            AbsoluteLayout.LayoutBounds="130,75,200,100"
                            FontSize="11"/>
 
-
                     <Frame BorderColor="MidnightBlue"
                            Margin="30,80,30,0"
                            BackgroundColor="White"
@@ -82,6 +78,13 @@
                            Grid.Row="1">
 
                         <AbsoluteLayout>
+
+                            <Label Text="Must contain atleast 1 digit"
+                                   TextColor="Red"
+                                   FontAttributes="Bold"
+                                   FontSize="7"
+                                   AbsoluteLayout.LayoutBounds="150,117,200,200"/>
+                            
                             <Frame AbsoluteLayout.LayoutBounds="-40,-40,181,80"
                                    >
                                 <Entry
@@ -89,20 +92,35 @@
                                     BackgroundColor="Transparent"
                                     Placeholder="Mohammed"
                                     Opacity="0.5"
+                                    x:Name="firstName"
                                     FontSize="12"
                                     FontAttributes="Bold"
-                                    TextColor="BLack"/>
+                                    TextColor="BLack">
+
+                                    <Entry.Behaviors>
+                                        <behaviors:FirstNameValidationBehavior/>
+                                    </Entry.Behaviors>
+
+                                </Entry>
+
                             </Frame>
 
                             <Frame AbsoluteLayout.LayoutBounds="100,-40,190,80">
                                 <Entry
                                     PlaceholderColor="Black"
                                     BackgroundColor="Transparent"
-                                    Placeholder="El Yahioui"
+                                    Placeholder="El Yahiaoui"
+                                    x:Name="lastName"
                                     Opacity="0.5"
                                     FontAttributes="Bold"
                                     FontSize="12"
-                                    TextColor="Black"/>
+                                    TextColor="Black">
+                                    <Entry.Behaviors>
+                                    <behaviors:LastNameValidationBehavior/>
+                                    </Entry.Behaviors>
+
+                                </Entry>
+                    
                             </Frame>
 
                             <Frame AbsoluteLayout.LayoutBounds="-40,15,181,80">
@@ -111,9 +129,16 @@
                                     BackgroundColor="Transparent"
                                     FontSize="12"
                                     Placeholder="ElYahioui@Yahoo.."
+                                    x:Name="userEmail"
                                     Opacity="0.5"
                                     FontAttributes="Bold"
-                                    TextColor="Black"/>
+                                    TextColor="Black">
+                                    <Entry.Behaviors>
+                                        <behaviors:EmailValidationBehaviour/>
+                                    </Entry.Behaviors>
+
+                                </Entry>
+                                
                             </Frame>
 
                             <Frame AbsoluteLayout.LayoutBounds="100,15,190,80">
@@ -122,34 +147,49 @@
                                     BackgroundColor="Transparent"
                                     Placeholder="0736990759"
                                     Opacity="0.5"
+                                    x:Name="phoneNumber"
                                     FontSize="12"
-                                    
                                     FontAttributes="Bold"
-                                    TextColor="Black"/>
+                                    TextColor="Black">
+                                    <Entry.Behaviors>
+                                        <behaviors:PhoneNumberValidationBehavior/>
+                                    </Entry.Behaviors>
+                                </Entry>
                             </Frame>
 
                             <Frame AbsoluteLayout.LayoutBounds="-40,70,181,80">
                                 <Entry
                                     PlaceholderColor="Black"
                                     BackgroundColor="Transparent"
-                                    Placeholder="980710-6183"
+                                    x:Name="socialSecurityNumber"
+                                    Placeholder="8890911488"
                                     Opacity="0.5"
                                     FontSize="12"
-                                    
                                     FontAttributes="Bold"
-                                    TextColor="Black"/>
+                                    TextColor="Black">
+                                    <Entry.Behaviors>
+                                        <behaviors:SSNValidationBehavior/>
+                                    </Entry.Behaviors>
+
+                                </Entry>
                             </Frame>
 
                             <Frame AbsoluteLayout.LayoutBounds="100,70,330,80">
                                 <Entry
                                     PlaceholderColor="Black"
                                     BackgroundColor="Transparent"
-                                    Placeholder="..."
+                                    Placeholder="************"
                                     Opacity="0.5"
+                                    x:Name="userPassword"
                                     FontSize="12"
                                     IsPassword="True"
                                     FontAttributes="Bold"
-                                    TextColor="Black"/>
+                                    TextColor="Black">
+                                    <Entry.Behaviors>
+                                        <behaviors:PasswordValidationBehavior/>
+                                    </Entry.Behaviors>
+
+                                </Entry>
                             </Frame>
 
                             <BoxView BackgroundColor="MidnightBlue"
@@ -191,7 +231,6 @@
                                    AbsoluteLayout.LayoutBounds="-10,75,200,100"
                                    FontSize="11"/>
 
-
                         </AbsoluteLayout>
 
                     </Frame>
@@ -228,12 +267,13 @@
                                FontAttributes="Bold"
                                FontSize="11"/>
 
-
                         <Button Text="Register"
                                 Margin="300,10,0,0"
                                 WidthRequest="200"
                                 HeightRequest="50"
                                 FontSize="23"
+                                x:Name="registerButton"
+                                Clicked="RegisterButton_Pressed"
                                 BackgroundColor="OrangeRed"
                                 TextColor="White"
                                 CornerRadius="10"
@@ -242,46 +282,34 @@
                     </AbsoluteLayout>
 
                     <Grid Grid.Row="3">
-                        <Grid>
+                        <AbsoluteLayout>
 
-                            <Label Text="Forgot your password?"
+                            <Button Text="Forgot your password?"
                                    TextColor="Gold"
                                    x:Name="Label1"
-                                   Grid.Column="0"
-                                   Margin="50,-15,0,0"
+                                    BackgroundColor="Transparent"
+                                    HeightRequest="30"
+                                   Margin="30,-25,0,0"
                                    FontAttributes="Bold"
+                                    Clicked="ForgotPassword_Clicked"
                                    FontSize="10">
 
-                                <Label.GestureRecognizers>
-                                    <TapGestureRecognizer
-                                    BindingContext="{x:Reference SignUpReference}"
-                                    />
-                                </Label.GestureRecognizers>
-                            </Label>
+                            </Button>
                             
-                                <Label Text="Already signed up?"
+                                <Button Text="Already signed up?"
                                        TextColor="Gold"
-                                       Grid.Column="1"
                                        x:Name="Label2"
-                                       Margin="20,-15,0,0"
+                                        BackgroundColor="Transparent"
+                                        Padding="0"
+                                       Margin="200,-20,0,0"
                                        FontAttributes="Bold"
+                                        Clicked="AlreadySignUp_Clicked"
                                        FontSize="10">
 
-                                <Label.GestureRecognizers>
-                                <TapGestureRecognizer
-                                    BindingContext="{x:Reference SignUpReference}"
-                                    />
-                                </Label.GestureRecognizers>
-                            </Label>
-                            
-
-                        </Grid>
+                            </Button>
+                        </AbsoluteLayout>
                     </Grid>
-                    
                 </Grid>
-
-
-
             </Frame>
         </Grid>
     </ContentPage.Content>

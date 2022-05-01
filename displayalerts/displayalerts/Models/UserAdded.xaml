@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Models="clr-namespace:displayalerts.Models"
+             xmlns:Models2="clr-namespace:displayalerts.Models2" x:DataType="Models2:User"
+             x:Class="displayalerts.Models.UserAdded">
+    <ContentPage.Content>
+
+            <StackLayout>
+
+                <StackLayout>
+
+                <Label Text="Hej"/>
+
+
+                <Frame Grid.Row="0"
+                                       Grid.Column="1">
+                        <Label x:Name="label1"
+                                           TextColor="Orange">
+
+                        </Label>
+                    </Frame>
+
+                    <Frame Grid.Row="1"
+                                       Grid.Column="1">
+                        <Label x:Name="label2">
+
+                        </Label>
+                    </Frame>
+
+                    <Frame Grid.Row="2"
+                                       Grid.Column="1">
+                        <Label x:Name="label3">
+
+                        </Label>
+                    </Frame>
+                </StackLayout>
+
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
