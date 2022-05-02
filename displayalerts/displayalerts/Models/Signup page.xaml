@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:models="clr-namespace:displayalerts.Models" x:DataType="models:CustomEntry"
              x:Class="displayalerts.Models.SignUpPage"
              xmlns:behaviors="clr-namespace:displayalerts.Reader"
-             
              x:Name="SignUpReference"
              BackgroundColor="MidnightBlue">
+    
     <ContentPage.Content>
         <Grid Margin="0,25,0,0">
             <Grid.RowDefinitions>
@@ -76,22 +76,14 @@
                            BackgroundColor="White"
                            HeightRequest="110"
                            Grid.Row="1">
-
                         <AbsoluteLayout>
 
-                            <Label Text="Must contain atleast 1 digit"
-                                   TextColor="Red"
-                                   FontAttributes="Bold"
-                                   FontSize="7"
-                                   AbsoluteLayout.LayoutBounds="150,117,200,200"/>
-                            
                             <Frame AbsoluteLayout.LayoutBounds="-40,-40,181,80"
                                    >
                                 <Entry
-                                    PlaceholderColor="Black"
+                                    PlaceholderColor="Gray"
                                     BackgroundColor="Transparent"
                                     Placeholder="Mohammed"
-                                    Opacity="0.5"
                                     x:Name="firstName"
                                     FontSize="12"
                                     FontAttributes="Bold"
@@ -107,46 +99,39 @@
 
                             <Frame AbsoluteLayout.LayoutBounds="100,-40,190,80">
                                 <Entry
-                                    PlaceholderColor="Black"
+                                    PlaceholderColor="Gray"
                                     BackgroundColor="Transparent"
                                     Placeholder="El Yahiaoui"
                                     x:Name="lastName"
-                                    Opacity="0.5"
                                     FontAttributes="Bold"
                                     FontSize="12"
                                     TextColor="Black">
                                     <Entry.Behaviors>
                                     <behaviors:LastNameValidationBehavior/>
                                     </Entry.Behaviors>
-
                                 </Entry>
                     
                             </Frame>
 
                             <Frame AbsoluteLayout.LayoutBounds="-40,15,181,80">
                                 <Entry
-                                    PlaceholderColor="Black"
+                                    PlaceholderColor="Gray"
                                     BackgroundColor="Transparent"
                                     FontSize="12"
                                     Placeholder="ElYahioui@Yahoo.."
                                     x:Name="userEmail"
-                                    Opacity="0.5"
                                     FontAttributes="Bold"
                                     TextColor="Black">
                                     <Entry.Behaviors>
                                         <behaviors:EmailValidationBehaviour/>
                                     </Entry.Behaviors>
-
                                 </Entry>
-                                
                             </Frame>
-
                             <Frame AbsoluteLayout.LayoutBounds="100,15,190,80">
                                 <Entry
-                                    PlaceholderColor="Black"
+                                    PlaceholderColor="Gray"
                                     BackgroundColor="Transparent"
-                                    Placeholder="0736990759"
-                                    Opacity="0.5"
+                                    Placeholder="ex: 0706990758"
                                     x:Name="phoneNumber"
                                     FontSize="12"
                                     FontAttributes="Bold"
@@ -159,11 +144,10 @@
 
                             <Frame AbsoluteLayout.LayoutBounds="-40,70,181,80">
                                 <Entry
-                                    PlaceholderColor="Black"
+                                    PlaceholderColor="Gray"
                                     BackgroundColor="Transparent"
                                     x:Name="socialSecurityNumber"
                                     Placeholder="8890911488"
-                                    Opacity="0.5"
                                     FontSize="12"
                                     FontAttributes="Bold"
                                     TextColor="Black">
@@ -176,10 +160,9 @@
 
                             <Frame AbsoluteLayout.LayoutBounds="100,70,330,80">
                                 <Entry
-                                    PlaceholderColor="Black"
+                                    PlaceholderColor="Gray"
                                     BackgroundColor="Transparent"
                                     Placeholder="************"
-                                    Opacity="0.5"
                                     x:Name="userPassword"
                                     FontSize="12"
                                     IsPassword="True"
@@ -238,6 +221,13 @@
                                     Scale="0.6"
                                     Margin="-70,-10,0,5">
 
+                        <Label TextColor="White"
+                               AbsoluteLayout.LayoutBounds="280,-20,280,50"
+                               FontSize="10"
+                               FontAttributes="Bold"
+                           Text="Password must contain atleast one number"
+                           />
+
                         <Frame BorderColor="White"
                                CornerRadius="0"
                                AbsoluteLayout.LayoutBounds="31,11,21,20"
@@ -254,7 +244,6 @@
                                TextColor="White"
                                FontAttributes="Bold"
                                FontSize="19"/>
-
 
                         <Label Text="By accepting our terms of agreement"
                                Margin="65,40,5,5"
@@ -307,6 +296,7 @@
                                        FontSize="10">
 
                             </Button>
+
                         </AbsoluteLayout>
                     </Grid>
                 </Grid>

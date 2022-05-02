@@ -33,13 +33,13 @@ namespace displayalerts.Reader
 
             if (Regex.IsMatch(userInput, emailPattern))
             {
-                userEntry.BackgroundColor = Color.GreenYellow;
+                userEntry.TextColor = Color.Green;
                 SignUpPage.EmailCorrect = true;
                 signUpService.UserEmail = userInput;
             }
             else
             {
-                userEntry.BackgroundColor = Color.PaleVioletRed;
+                userEntry.TextColor = Color.Red;
                 SignUpPage.EmailCorrect = false;
 
             }

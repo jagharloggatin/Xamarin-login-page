@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:displayalerts.Models"
              x:Class="displayalerts.Models.Login3"
+             xmlns:behaviors="clr-namespace:displayalerts.Reader"
              BackgroundColor="MidnightBlue">
     <ContentPage.Content>
         <Grid Margin="0,25,0,0">
@@ -57,8 +58,11 @@
                                TextColor="White"
                                FontSize="12"
                                AbsoluteLayout.LayoutBounds="35,69,100,100"
-                               FontAttributes="Bold"
-                               />
+                               FontAttributes="Bold">
+ 
+
+                        </Label>
+
                     </AbsoluteLayout>
 
 
@@ -78,7 +82,12 @@
                                     FontSize="11"
                                     Opacity="0.5"
                                     FontAttributes="Bold"
-                                    TextColor="BLack"/>
+                                    Completed="Login_PressedOrCompleted"
+                                    TextColor="BLack">
+                                    <Entry.Behaviors>
+                                        <behaviors:SSNValidationBehavior/>
+                                    </Entry.Behaviors>
+                                </Entry>
                             </Frame>
 
                             <Frame AbsoluteLayout.LayoutBounds="-40,15,330,80">
@@ -90,7 +99,11 @@
                                     Opacity="0.5"
                                     FontSize="11"
                                     IsPassword="True"
-                                    TextColor="Black"/>
+                                    TextColor="Black">
+                                    <Entry.Behaviors>
+                                        <behaviors:PasswordValidationBehavior/>
+                                    </Entry.Behaviors>
+                                </Entry>
                             </Frame>
 
                             <BoxView BackgroundColor="MidnightBlue"
@@ -106,20 +119,6 @@
                                        
                                FontAttributes="Bold"
                                />
-
-               
-
-                            <Image Source="password.png" 
-                                   Scale="0.7"
-                                   AbsoluteLayout.LayoutBounds="100,42,290,25"
-                                 />
-
-                            <Image Source="username.png" 
-                                   Scale="0.7"
-                                   AbsoluteLayout.LayoutBounds="100,-13,290,25"
-                                 />
-
-                 
                         </AbsoluteLayout>
 
                     </Frame>
@@ -174,6 +173,7 @@
                                 <Button Text="Login"
                                         BackgroundColor="OrangeRed"
                                         TextColor="White"
+                                        Clicked="Login_PressedOrCompleted"
                                         CornerRadius="10"
                                         FontAttributes="Bold"/>
                             </Frame>
@@ -194,15 +194,8 @@
                                         FontAttributes="Bold"/>
 
                             </Frame>
-
-
                         </Grid>
-
-
                     </AbsoluteLayout>
-
-
-     
                 </Grid>
             </Frame>
         </Grid>

@@ -32,13 +32,13 @@ namespace displayalerts.Reader
 
             if (Regex.IsMatch(userInput, socialSecurityNumber))
             {
-                userEntry.BackgroundColor = Color.GreenYellow;
+                userEntry.TextColor = Color.Green;
                 SignUpPage.SSNCorrect = true;
                 signUpService.UserSSN = userInput;
             }
             else
             {
-                userEntry.BackgroundColor = Color.PaleVioletRed;
+                userEntry.TextColor = Color.Red;
                 SignUpPage.SSNCorrect = false;
             }
         }

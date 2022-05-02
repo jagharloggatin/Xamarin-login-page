@@ -28,17 +28,17 @@ namespace displayalerts.Reader
             var signUpService = new SignUpPage();
             var userInput = e.NewTextValue;
             var userEntry = sender as Entry;
-            var passwordPattern = "^[a-zA-z0-9]{5,}[0-9]{1,}$";
+            var passwordPattern = "([A-Za-z]+[0-9]|[0-9]+[A-Za-z])[A-Za-z0-9]*";
 
             if (Regex.IsMatch(userInput, passwordPattern))
             {
-                userEntry.BackgroundColor = Color.GreenYellow;
+                userEntry.TextColor = Color.Green;
                 SignUpPage.PassWordCorrect = true;
                 signUpService.UserPassword = userInput;
             }
             else
             {
-                userEntry.BackgroundColor = Color.PaleVioletRed;
+                userEntry.TextColor = Color.Red;
                 SignUpPage.PassWordCorrect = false;
             }
         }

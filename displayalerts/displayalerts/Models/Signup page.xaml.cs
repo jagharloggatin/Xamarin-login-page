@@ -24,7 +24,6 @@ namespace displayalerts.Models
         public static bool SSNCorrect = false;
         public static bool PassWordCorrect = false;
 
-
         #region private properties
 
         private string _userFirstName;
@@ -130,7 +129,8 @@ namespace displayalerts.Models
                                         && LastNameCorrect 
                                         && EmailCorrect 
                                         && PhoneNumberCorrect 
-                                        && SSNCorrect && PassWordCorrect;
+                                        && SSNCorrect 
+                                        && PassWordCorrect;
 
             if (Completeregistration)
             {
@@ -150,11 +150,6 @@ namespace displayalerts.Models
 
                 await Navigation.PushAsync(new UserAdded());
             }
-
         }
-
- 
     }
-
-
 }

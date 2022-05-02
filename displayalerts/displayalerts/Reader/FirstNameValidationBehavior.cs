@@ -9,7 +9,6 @@ namespace displayalerts.Reader
 {
     internal class FirstNameValidationBehavior : Behavior<Entry>
     {
-
         protected override void OnAttachedTo(Entry bindable)
         {
             base.OnAttachedTo(bindable);
@@ -29,18 +28,18 @@ namespace displayalerts.Reader
             var signUpService = new SignUpPage();
             var userInput = e.NewTextValue;
             var userEntry = sender as Entry;
-            string namePattern = "^[A-Z]{1}[A-Za-z]{2,}$";
-
+            string namePattern = "^[A-Za-z]{3,}$";
 
             if (Regex.IsMatch(userInput, namePattern))
             {
-                userEntry.BackgroundColor = Color.GreenYellow;
+                Regex.Replace(userEntry.Text, "^[A-Z][1]$", m => m.Value.ToUpper());
+                userEntry.TextColor = Color.Green;
                 SignUpPage.FirstNameCorrect = true;
                 signUpService.UserFirstName = userInput;
             }
             else
             {
-                userEntry.BackgroundColor = Color.PaleVioletRed;
+                userEntry.TextColor = Color.Red;
                 SignUpPage.FirstNameCorrect = false;
             }
         }

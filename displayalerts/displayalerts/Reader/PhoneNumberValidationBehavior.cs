@@ -33,13 +33,13 @@ namespace displayalerts.Reader
 
             if (Regex.IsMatch(userInput, phoneNumberPattern))
             {
-                userEntry.BackgroundColor = Color.GreenYellow;
+                userEntry.TextColor = Color.Green;
                 SignUpPage.PhoneNumberCorrect = true;
                 signUpService.UserPhoneNumber = userInput;
             }
             else
             {
-                userEntry.BackgroundColor = Color.PaleVioletRed;
+                userEntry.TextColor = Color.Red;
                 SignUpPage.PhoneNumberCorrect = false;
             }
         }

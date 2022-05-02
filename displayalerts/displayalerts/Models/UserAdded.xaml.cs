@@ -21,7 +21,6 @@ namespace displayalerts.Models
         {
             UserList userList = new UserList();
 
-
             foreach (var item in userList.users)
             {
                 label1.Text = item.FirstName;

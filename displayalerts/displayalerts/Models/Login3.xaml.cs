@@ -31,5 +31,11 @@ namespace displayalerts.Models
         {
             await Navigation.PushAsync(new ForgotPassword());
         }
+
+        private void Login_PressedOrCompleted(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
